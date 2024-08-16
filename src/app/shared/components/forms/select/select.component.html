@@ -1,0 +1,8 @@
+<div class="container-input">
+  <label for="">{{field().label}}</label>
+  <select class="form-go-input" [name]="field().name" [id]="field().item" (change)="updateValue($event)" [value]="value">
+    @for (option of field().options; track $index) {
+      <option [value]="option.value">{{option.label}}</option>
+    }
+  </select>
+</div>

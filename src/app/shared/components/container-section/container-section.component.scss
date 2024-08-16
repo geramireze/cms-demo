@@ -1,0 +1,28 @@
+.gov-co-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 80px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: auto;
+  margin: 0 auto;
+  .gov-co-section--container {
+    width: 100%;
+    max-width: 1280px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 20px;
+    h2 {
+      width: 100%;
+      margin-left: 20;
+      text-align: center;
+    }
+  }
+}

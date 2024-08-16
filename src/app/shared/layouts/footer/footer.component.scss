@@ -1,0 +1,23 @@
+.pie-pagina-govco {
+  .first-section {
+    -webkit-box-shadow: 0.625rem 3.75rem 0 -5.625rem var(--color-ministery),
+      -3.75rem 3.75rem 0 -2.5rem var(--color-ministery),
+      0 0 0 0 var(--color-ministery),
+      3.75rem 3.75rem 0 -2.5rem var(--color-ministery),
+      -50px 5rem 0 -3.75rem var(--color-ministery);
+    box-shadow: 0.625rem 3.75rem 0 -5.625rem var(--color-ministery),
+      -3.75rem 3.75rem 0 -2.5rem var(--color-ministery),
+      0 0 0 0 var(--color-ministery),
+      3.75rem 3.75rem 0 -2.5rem var(--color-ministery),
+      -50px 5rem 0 -3.75rem var(--color-ministery);
+  }
+
+  .govco-logo-potencia {
+    content: var(--brand-gov);
+  }
+
+  .govco-logo-entidad {
+    content: var(--brand-ministery);
+    height: 100px;
+  }
+}

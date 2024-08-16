@@ -1,0 +1,91 @@
+.entradas-de-texto-govco {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.entradas-de-texto-govco label {
+  line-height: 1.125rem;
+}
+
+.entradas-de-texto-govco input[type="text"],
+.entradas-de-texto-govco input[type="password"],
+.entradas-de-texto-govco input[type="mail"],
+.entradas-de-texto-govco input[type="tel"] {
+  outline: none;
+  background-color: var(--govcolor-white);
+  border: 0.063rem solid var(--govcolor-silver-dis);
+  border-radius: 0.313rem;
+  width: 100%;
+  padding: 0.625rem 2.25rem 0.625rem 0.625rem;
+  display: inline;
+  height: auto;
+  box-sizing: inherit;
+  line-height: 0.938rem;
+  margin: 0;
+  box-shadow: none;
+}
+
+.entradas-de-texto-govco input[type="text"],
+.entradas-de-texto-govco input[type="password"],
+.entradas-de-texto-govco input[type="mail"],
+.entradas-de-texto-govco input[type="tel"],
+.entradas-de-texto-govco input[type="text"]::placeholder,
+.entradas-de-texto-govco input[type="password"]::placeholder,
+.entradas-de-texto-govco input[type="mail"]::placeholder,
+.entradas-de-texto-govco input[type="tel"]::placeholder,
+.entradas-de-texto-govco label {
+  font-size: 15px;
+  font-family: "Verdana-Regular";
+  color: var(--govcolor-matterhorn);
+}
+
+.entradas-de-texto-govco input[type="text"]:not(.browser-default):active:not([readonly]),
+.entradas-de-texto-govco input[type="password"]:not(.browser-default):active:not([readonly]),
+.entradas-de-texto-govco input[type="mail"]:not(.browser-default):active:not([readonly]),
+.entradas-de-texto-govco input[type="tel"]:not(.browser-default):active:not([readonly]),
+.entradas-de-texto-govco input[aria-invalid="false"]:not(.browser-default):active:not([readonly]),
+.entradas-de-texto-govco input[aria-invalid="true"]:not(.browser-default):active:not([readonly]) {
+  border-color: var(--govcolor-matterhorn);
+}
+
+.entradas-de-texto-govco input[type="text"]:not(.browser-default):focus-visible:not([readonly]),
+.entradas-de-texto-govco input[type="password"]:not(.browser-default):focus:not([readonly]),
+.entradas-de-texto-govco input[type="mail"]:not(.browser-default):focus:not([readonly]),
+.entradas-de-texto-govco input[type="tel"]:not(.browser-default):focus:not([readonly]),
+.entradas-de-texto-govco input[aria-invalid="false"]:not(.browser-default):focus:not([readonly]),
+.entradas-de-texto-govco input[aria-invalid="true"]:not(.browser-default):focus:not([readonly]) {
+  box-shadow: none;
+}
+
+.entradas-de-texto-govco input[type="text"]:not(.browser-default):focus-visible:not([readonly]):not(:active),
+.entradas-de-texto-govco input[type="password"]:not(.browser-default):focus-visible:not([readonly]):not(:active),
+.entradas-de-texto-govco input[type="mail"]:not(.browser-default):focus-visible:not([readonly]):not(:active),
+.entradas-de-texto-govco input[type="tel"]:not(.browser-default):focus-visible:not([readonly]):not(:active),
+.entradas-de-texto-govco input[aria-invalid="false"]:not(.browser-default):focus-visible:not([readonly]):not(:active),
+.entradas-de-texto-govco input[aria-invalid="true"]:not(.browser-default):focus-visible:not([readonly]):not(:active) {
+  border-width: 0.125rem;
+  border-color: var(--govcolor-havelock-lue);
+  outline: max(0.125rem, 0.125rem) solid var(--govcolor-black);
+  outline-offset: max(0.125rem, 0.125rem);
+  color: var(--govcolor-matterhorn);
+}
+
+.entradas-de-texto-govco input[type="text"]:disabled,
+.entradas-de-texto-govco input[type="password"]:disabled,
+.entradas-de-texto-govco input[type="mail"]:disabled,
+.entradas-de-texto-govco input[type="tel"]:disabled {
+  background-color: var(--govcolor-silver-dis);
+  border-style: solid;
+  border-color: var(--govcolor-matterhorn);
+}
+
+.entradas-de-texto-govco span {
+  font-size: 15px;
+  font-family: "Verdana-Regular";
+  color: var(--govcolor-matterhorn);
+  display: block;
+  width: 100%;
+  line-height: 1.25rem;
+}
+

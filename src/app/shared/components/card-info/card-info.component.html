@@ -1,0 +1,71 @@
+@switch (CardType()) {
+@case ('IMG-LEFT') {
+@defer {
+<!-- Tarjeta horizontal izquierda -->
+<a class="tarjeta-govco horizontal-tarjeta-govco" href="javascript:void()" [title]="title()">
+  <div class="container-img-tarjeta-govco">
+    <img class="image-tarjeta-govco" [src]="img()" [alt]="title()" />
+  </div>
+  <div class="body-tarjeta-govco">
+    <strong>
+      <h5>{{title()}}</h5>
+    </strong>
+    <p>{{descripcion()}}</p>
+  </div>
+</a>
+}
+}
+@case ('IMG-RIGHT') {
+@defer {
+<!-- Tarjeta horizontal derecha -->
+<a class="tarjeta-govco horizontal-tarjeta-govco reverse-tarjeta-govco" href="javascript:void()" [title]="title()">
+  <div class="container-img-tarjeta-govco">
+    <img class="image-tarjeta-govco" [src]="img()" [alt]="title()" />
+  </div>
+  <div class="body-tarjeta-govco">
+    <h5>{{title()}}</h5>
+    <p>{{descripcion()}}</p>
+  </div>
+</a>
+}
+}
+@case ('IMG-TOP') {
+@defer {
+<a class="tarjeta-govco vertical-tarjeta-govco" href="javascript:void()" [title]="title()">
+  <div class="container-img-tarjeta-govco">
+    <img class="image-tarjeta-govco" [src]="img()" [alt]="title()" />
+  </div>
+  <div class="body-tarjeta-govco tarjeta-texto">
+    <span>28 febrero 2019</span>
+    <h5>{{title()}}</h5>
+    <p>{{descripcion()}}</p>
+  </div>
+</a>
+}}
+@case ('IMG-ICON') {
+@defer {
+<!-- Tarjeta ícono + texto Variante vertical -->
+<a class="icono-tarjeta-govco vertical-tarjeta-govco" href="javascript:void()" [title]="title()">
+  <div class="container-icono-tarjeta-govco">
+    <img src=" https://cdn.www.gov.co/v5/assets/images/ilustracion-color.svg" [alt]="title()" />
+  </div>
+  <div class="body-tarjeta-govco tarjeta-texto-secundario">
+    <div class="title-body-tarjeta-govco">
+      <h5 class="titulo-ilustracion">{{title()}}</h5>
+    </div>
+    <p>{{descripcion()}}</p>
+  </div>
+</a>
+}}
+@case ('IMG-ICON-HOR') {
+@defer {
+<a class="icono-tarjeta-govco horizontal-tarjeta-govco" href="javascript:void()" [title]="title()">
+  <div class="container-icono-tarjeta-govco">
+    <img src=" https://cdn.www.gov.co/v5/assets/images/ilustracion-color.svg" [alt]="title()" />
+  </div>
+  <div class="body-tarjeta-govco">
+    <h5>{{title()}}</h5>
+  </div>
+</a>
+}}
+}

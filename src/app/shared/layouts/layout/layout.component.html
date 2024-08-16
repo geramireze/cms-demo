@@ -1,0 +1,10 @@
+<app-header />
+<app-menu />
+@if (viewInternal()) {
+  <app-bread-crumbs />
+}
+<main class="govco-main">
+ <ng-content />
+</main>
+<app-accesibility-bar />
+<app-footer/>

@@ -1,0 +1,45 @@
+swiper-container {
+  --swiper-pagination-bullet-inactive-color: var(--ion-color-step-200, #cccccc);
+  --swiper-pagination-bullet-width: 0.65rem;
+  --swiper-pagination-bullet-size: 0.65rem;
+  --swiper-pagination-bullet-border: 0.155rem solid #FFFFFF;
+  --swiper-pagination-color: var(--ion-color-primary, #0943B5);
+  --swiper-pagination-bullet-box-shadow: 0 0.188rem 0.25rem #00000029;
+  --swiper-pagination-progressbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.25);
+  --swiper-scrollbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.1);
+  --swiper-scrollbar-drag-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.5);
+  --swiper-theme-color: var(--govcolor-cobalt);
+}
+
+// .swiper-slide-active{
+//   display: block !important;
+//   z-index: 1 !important;
+//   opacity: 1 !important;
+// }
+
+swiper-slide {
+  display: flex;
+  position: relative;
+
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  height: 400px;
+  font-size: 18px;
+
+  text-align: center;
+  box-sizing: border-box;
+}
+
+swiper-slide > img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}

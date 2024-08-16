@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@shared/*": ["src/app/shared/*"],
+      "@commons/*": ["src/app/commons/*"],
+      "@auth/*": ["src/app/auth/*"],
+      "@enviroments/*": ["src/environments/*"],
+      "@config/*": ["src/app/config/*"],
+      "@pages/*": ["src/app/pages/*"],
+      "@store/*": ["src/store/*"],
+    },
+  }
+}

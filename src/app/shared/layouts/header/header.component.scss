@@ -1,0 +1,16 @@
+.cabecera-govco .border-bottom-govco {
+  border-bottom: 4px solid var(--color-ministery);
+}
+
+.cabecera-govco .barra-logos-govco .logo_potencia {
+  content: var(--brand-gov);
+}
+
+.cabecera-govco .barra-logos-govco .logo_ministerio {
+  content: var(--brand-ministery);
+  height: 100px;
+}
+
+.cabecera-govco .barra-inferior-govco {
+  height: 150px;
+}

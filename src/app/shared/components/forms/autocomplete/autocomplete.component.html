@@ -1,0 +1,28 @@
+<div class="container-input">
+  <label for="">{{field().label}}</label>
+  <input
+  class="form-go-input"
+  [id]="field().item"
+  [placeholder]="field().placeholder"
+  type="text"
+  (focus)="onInputFocus($event)"
+  [value]="inputValue"
+  (input)="onInputChange($event)"
+  (blur)="onTouched()" />
+  <button type="button" class="dropdown-toggle" (click)="toggleDropdown()">▼</button>
+  @if (isOpen) {
+  <ul class="container-options">
+    @for (option of filteredOptions; track option.value) {
+      @if (filteredOptions.length > 0) {
+        <li class="item-option" [class.active]="option.value === selectedOptionValue" (click)="selectOption(option)">
+          <p>{{ option.label }}</p>
+        </li>
+      } @else if (filteredOptions.length === 0) {
+        <li class="item-option">
+          <p>No se encontraron resultados.</p>
+        </li>
+      }
+    }
+  </ul>
+  }
+</div>

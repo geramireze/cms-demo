@@ -1,0 +1,108 @@
+<footer class="pie-pagina-govco">
+  @if (ministry) {
+    <div class="first-section">
+      <h4>{{ministry.fullName}}</h4>
+      <div class="logo-container">
+        <span class="govco-logo-entidad"></span>
+      </div>
+      <h5>Sede principal</h5>
+      @if (ministry.data) {
+      <ul class="contact-data-container">
+        <li>
+          <p>Dirección: {{ministry.data.address}}</p>
+        </li>
+        <li>
+          <p>Código postal: {{ministry.data.zip}}</p>
+        </li>
+        <li>
+          <p>Horario de atención: {{ministry.data.time}} </p>
+        </li>
+        <li>
+          <p>Teléfono conmutador: {{ministry.data.phone}}</p>
+        </li>
+        <li>
+          <p>Línea gratuita: {{ministry.data.freeLine}}</p>
+        </li>
+        <li>
+          <p>Línea anticorrupción: {{ministry.data.anticorrup}}</p>
+        </li>
+        <li>
+          <p>
+            Correo institucional:
+            <a href="mailto:{{ ministry.data.emailInsti }}" class="btn-govco link-btn-govco"
+              aria-label="Permite enviar correo" target="_blank">{{ ministry.data.emailInsti }}</a>
+          </p>
+        </li>
+        <li>
+          <p>
+            Correo de notificaciones judiciales:
+            <a href="mailto:{{ ministry.data.emailCorres }}" class="btn-govco link-btn-govco"
+              aria-label="Permite enviar correo" target="_blank">{{ ministry.data.emailCorres }}</a>
+          </p>
+        </li>
+      </ul>
+      }
+      @if (ministry.redes) {
+      <div class="links-container">
+        <a href={{ministry.redes.x.path}} role="button" class="btn-govco link-btn-govco"
+          style="width: 123px; height: 33px;" aria-label="enlace al twiter de la entidad">
+          <span class="govco-svg govco-twitter" aria-hidden="true"></span>
+          <span>{{ministry.redes.x.user}}</span>
+        </a>
+        <a href={{ministry.redes.instagram.path}} role="button" class="btn-govco link-btn-govco"
+          style="width: 123px; height: 33px;" aria-label="enlace al instagram de la entidad">
+          <span class="govco-svg govco-instagram" aria-hidden="true"></span>
+          <span>{{ministry.redes.instagram.user}}</span>
+        </a>
+        <a href={{ministry.redes.facebook.path}} role="button" class="btn-govco link-btn-govco"
+          style="width: 123px; height: 33px;" aria-label="enlace al facebook de la entidad">
+          <span class="govco-svg govco-facebook-f" aria-hidden="true"></span>
+          <span>{{ministry.redes.facebook.user}}</span>
+        </a>
+      </div>
+      }
+      <div class="data-container">
+        @if (ministry.headquarters) {
+        @for (site of ministry.headquarters; track $index) {
+        <ul class="data">
+          <h6>{{site.name}}</h6>
+          <li>
+            <p>Dirección: {{site.address}} </p>
+          </li>
+          <li>
+            <p>Horario de atención: {{site.time}} </p>
+          </li>
+        </ul>
+        <ul class="data">
+          <h6>Contacto</h6>
+          <li>
+            <p>Teléfono conmutador: {{site.phone}} </p>
+          </li>
+          <li>
+            <p>
+              Correo institucional:
+              <a href="mailto:{{site.emailInsti}}" class="btn-govco link-btn-govco" aria-label="Permite enviar correo"
+                target="_blank">{{site.emailInsti}}</a>
+            </p>
+          </li>
+        </ul>
+        }
+        }
+      </div>
+      @if (ministry.legal) {
+        <div class="end-links-container">
+          <a href={{ministry.legal.policies}} class="btn-govco link-btn-govco">Políticas</a>
+          <a href={{ministry.legal.sitemaps}} class="btn-govco link-btn-govco">Mapa del sitio</a>
+          <a href={{ministry.legal.terms}} class="btn-govco link-btn-govco">Términos y condiciones</a>
+          <a href={{ministry.legal.acces}} class="btn-govco link-btn-govco">Accesibilidad</a>
+        </div>
+      }
+    </div>
+  }
+  <div class="second-section">
+    <span class="govco-logo"></span>
+    <span class="separator"></span>
+    <span class="govco-co"></span>
+  </div>
+</footer>
+<app-top-btn />

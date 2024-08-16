@@ -1,0 +1,9 @@
+<app-layout [viewInternal]="true">
+  @defer (on viewport) {
+    <app-dynamic-form class="dynamic-form" [fields]="formLogin" [formGroupFields]="loginForm" (onSubmit)="login()"
+      labelBtn="Crear cuenta">
+    </app-dynamic-form>
+    } @placeholder {
+      <p>Cargando</p>
+    }
+</app-layout>

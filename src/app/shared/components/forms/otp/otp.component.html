@@ -1,0 +1,15 @@
+<div class="container-input">
+  <div class="otp-container">
+    @for (ctrl of otpFormControls; let i = $index;track trackByIndex) {
+      <input
+           [id]="'otp-input-' + i"
+           type="text"
+           maxlength="1"
+           [formControl]="ctrl"
+           [disabled]="disabled"
+           (input)="onInput($event, i)"
+           (keydown)="onKeydown($event, i)"/>
+    }
+
+  </div>
+</div>

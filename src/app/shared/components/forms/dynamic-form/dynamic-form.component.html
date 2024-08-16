@@ -1,0 +1,48 @@
+<form  class="form-go" [formGroup]="formGroupFields()">
+  @for (field of fields(); track field.item) {
+    @switch (field.type) {
+      @case ('text') {
+        @defer {
+        <app-input [field]="field" [formControlName]="field.item" />
+        }
+      }
+      @case ('select') {
+        @defer {
+        <app-select [field]="field" [formControlName]="field.item" />
+        }
+      }
+      @case ('autocomplete') {
+        @defer {
+        <app-autocomplete [field]="field" [formControlName]="field.item" />
+        }
+      }
+      @case ('otp') {
+        @defer {
+        <app-otp [field]="field" [formControlName]="field.item" [length]="6" />
+        }
+      }
+      @case ('hidden') {
+        @defer {
+        <input [type]="field.type" [formControlName]="field.item" [name]="field.name" [id]="field.item" />
+        }
+      }
+      <!-- @case ('create-password') {
+        @defer {
+          <app-create-password  [formControlName]="field.item" />
+        }
+      } -->
+      @case ('password') {
+        @defer {
+          <app-input-password [field]="field" [formControlName]="field.item" />
+        }
+      }
+      @default {
+        @defer {
+        <app-input [field]="field" [formControlName]="field.item" />
+        }
+      }
+    }
+  }
+  <ng-content />
+  <button type="button" (click)="formSubmit($event)" [disabled]="!this.formGroupFields().valid" class="btn-go" >{{labelBtn()}}</button>
+</form>
